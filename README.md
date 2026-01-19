@@ -1,105 +1,59 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>xgamingenzoo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Gamingenzoo</title>
     <style>
         body {
             margin: 0;
+            height: 100vh;
             background-color: #64CDE8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             font-family: Arial, sans-serif;
-            text-align: center;
         }
-
-        header {
-            background-color: #003344;
-            padding: 20px;
-            color: white;
-            font-size: 32px;
+        h1 {
+            font-size: 48px;
+            margin-bottom: 40px;
         }
-
-        .container {
-            margin-top: 60px;
-            padding: 20px;
-        }
-
-        p {
-            font-size: 20px;
-            color: #003344;
-        }
-
-        .buttons {
-            margin-top: 40px;
-        }
-
         button {
-            width: 260px;
-            max-width: 90%;
-            padding: 16px;
-            margin: 15px auto;
-            display: block;
-            font-size: 18px;
+            width: 240px;
+            padding: 15px;
+            margin: 12px;
+            font-size: 20px;
             border: none;
             border-radius: 12px;
             cursor: pointer;
+            background-color: white;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+            transition: 0.2s;
         }
-
-        .youtube { background-color: red; color: white; }
-        .instagram { background-color: #E1306C; color: white; }
-        .twitch { background-color: #9146FF; color: white; }
-
         button:hover {
-            opacity: 0.85;
-        }
-
-        /* 📱 Téléphone */
-        @media (max-width: 600px) {
-            header {
-                font-size: 24px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-
-            button {
-                font-size: 16px;
-                padding: 14px;
-            }
+            transform: scale(1.08);
+            background-color: #f0f0f0;
         }
     </style>
 </head>
-
 <body>
-
-<header>xgamingenzoo</header>
-
-<div class="container">
-    <p>Chaîne gaming 🔥<br>YouTube • Instagram • Twitch</p>
-
-    <div class="buttons">
-        <button class="youtube" onclick="openYoutube()">YouTube</button>
-        <button class="instagram" onclick="openInstagram()">Instagram</button>
-        <button class="twitch" onclick="openTwitch()">Twitch</button>
-    </div>
-</div>
-
-<script>
-    function openYoutube() {
-        window.open("https://www.youtube.com/@gamingenzoo");
-    }
-
-    function openInstagram() {
-        window.open("https://www.instagram.com/xgamingenzoo/");
-    }
-
-    function openTwitch() {
-        window.open("https://www.twitch.tv/gamingenzoo");
-    }
-</script>
+    <h1>Gamingenzoo</h1>
+    <button onclick="openLink('https://www.instagram.com/xgamingenzoo/')">
+        Instagram
+    </button>
+    <button onclick="openLink('https://www.youtube.com/@gamingenzoo')">
+        YouTube
+    </button>
+    <button onclick="openLink('https://www.twitch.tv/gamingenzoo')">
+        Twitch
+    </button>
+    <script>
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+    </script>
 
 </body>
 </html>
+
+
 
