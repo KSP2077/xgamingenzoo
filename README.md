@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <title>Gamingenzoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -15,60 +16,77 @@
             font-family: Arial, sans-serif;
             padding: 20px;
         }
-        .container {
-            position: relative;
-            width: 500px;
-            max-width: 90%;
-        }
-        /* Image de fond */
-        .bg-image {
-            width: 100%;
-            border-radius: 12px;
-        }
-        /* Texte sur l'image */
-        .title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: clamp(24px, 4vw, 36px);
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+
+        h1 {
+            font-size: clamp(32px, 8vw, 48px);
+            margin-bottom: 30px;
             text-align: center;
+            color: black;
         }
-        /* Boutons sous l'image */
-        .btn {
+
+        button {
             width: 100%;
-            max-width: 300px;
-            padding: 15px;
+            max-width: 320px;
+            padding: 18px;
             margin: 10px 0;
             font-size: 18px;
             border: none;
-            border-radius: 10px;
+            border-radius: 16px;
             cursor: pointer;
             color: white;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
             transition: 0.2s;
         }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
         /* Couleurs plateformes */
-        .instagram { background-color: #9900FF; }
-        .youtube { background-color: #FF0000; }
-        .twitch { background-color: #C600FF; }
-        .btn:hover { transform: scale(1.05); }
-        @media (max-width: 600px) {
-            .title { font-size: clamp(20px, 5vw, 28px); }
-            .btn { font-size: 16px; }
+        .youtube {
+            background-color: #FF0000;
+        }
+
+        .instagram {
+            background-color: #9900FF;
+        }
+
+        .twitch {
+            background-color: #C600FF;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="kksspp.jpg" alt="Fond" class="bg-image">
-        <div class="title">Gamingenzoo</div>
-    </div>
-    <button class="btn instagram" onclick="openLink('https://www.instagram.com/x
 
+    <h1>Gamingenzoo</h1>
 
+    <button class="instagram"
+        onclick="openLink('https://www.instagram.com/xgamingenzoo/')">
+        📸 Instagram
+    </button>
+
+    <button class="youtube"
+        onclick="openLink('https://www.youtube.com/@gamingenzoo')">
+        ▶️ YouTube
+    </button>
+
+    <button class="twitch"
+        onclick="openLink('https://www.twitch.tv/gamingenzoo')">
+        🎮 Twitch
+    </button>
+
+    <script>
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
 
 
 
