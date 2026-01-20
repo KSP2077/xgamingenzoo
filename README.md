@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -18,45 +19,36 @@
         }
 
         h1 {
-            font-size: clamp(32px, 8vw, 48px);
+            font-size: clamp(32px, 6vw, 48px);
             margin-bottom: 30px;
-            text-align: center;
-            color: black;
         }
 
-        button {
+        .btn {
             width: 100%;
-            max-width: 320px;
-            padding: 18px;
+            max-width: 360px;
+            padding: 16px;
             margin: 10px 0;
             font-size: 18px;
             border: none;
-            border-radius: 16px;
+            border-radius: 14px;
             cursor: pointer;
             color: white;
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
             transition: 0.2s;
         }
 
-        button:hover {
+        .btn:hover {
             transform: scale(1.05);
         }
 
-        button:active {
+        /* Couleurs */
+        .insta1 { background-color: #9900FF; }
+        .youtube { background-color: #FF0000; }
+        .twitch { background-color: #C600FF; }
+        .insta2 { background-color: #7A00CC; }
+
+        .btn:active {
             transform: scale(0.97);
-        }
-
-        /* Couleurs plateformes */
-        .youtube {
-            background-color: #FF0000;
-        }
-
-        .instagram {
-            background-color: #9900FF;
-        }
-
-        .twitch {
-            background-color: #C600FF;
         }
     </style>
 </head>
@@ -64,19 +56,24 @@
 
     <h1>Gamingenzoo</h1>
 
-    <button class="instagram"
+    <button class="btn insta1"
         onclick="openLink('https://www.instagram.com/xgamingenzoo/')">
-        📸 Instagram
+        📸 Instagram xgamingenzoo
     </button>
 
-    <button class="youtube"
+    <button class="btn youtube"
         onclick="openLink('https://www.youtube.com/@gamingenzoo')">
         ▶️ YouTube
     </button>
 
-    <button class="twitch"
+    <button class="btn twitch"
         onclick="openLink('https://www.twitch.tv/gamingenzoo')">
         🎮 Twitch
+    </button>
+
+    <button class="btn insta2"
+        onclick="openLink('https://www.instagram.com/gamingenzoo_tv/')">
+        📸 Instagram gamingenzoo_tv
     </button>
 
     <script>
@@ -87,6 +84,5 @@
 
 </body>
 </html>
-
 
 
