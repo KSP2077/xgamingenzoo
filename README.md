@@ -49,7 +49,7 @@
     <h1>Gamingenzoo</h1>
     <button class="btn insta1"
         onclick="openLink('https://www.instagram.com/xgamingenzoo/')">
-        📸 Instagram xgamingenzoo
+        📸 Instagram gamingenzoo
     </button>
     <button class="btn youtube"
         onclick="openLink('https://www.youtube.com/@gamingenzoo')">
