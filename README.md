@@ -1,86 +1,67 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Gamingenzoo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Gamingenzoo</title>
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background-color: #64CDE8;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        h1 {
-            font-size: clamp(32px, 6vw, 48px);
-            margin-bottom: 30px;
-        }
+    /* IMAGE DE FOND */
+    background: url("ksppfpv.jpg") center/cover no-repeat;
+    font-family: Arial, sans-serif;
+}
 
-        .btn {
-            width: 100%;
-            max-width: 360px;
-            padding: 16px;
-            margin: 10px 0;
-            font-size: 18px;
-            border: none;
-            border-radius: 14px;
-            cursor: pointer;
-            color: white;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-            transition: 0.2s;
-        }
+/* panneau central */
+.card {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
 
-        .btn:hover {
-            transform: scale(1.05);
-        }
+/* titre */
+h1 {
+    color: white;
+    margin-bottom: 25px;
+}
 
-        /* Couleurs */
-        .insta1 { background-color: #9900FF; }
-        .youtube { background-color: #FF0000; }
-        .twitch { background-color: #C600FF; }
-        .insta2 { background-color: #7A00CC; }
+/* boutons */
+a {
+    display: block;
+    margin: 10px 0;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    background: #00bcd4;
+    border-radius: 10px;
+    transition: 0.3s;
+}
 
-        .btn:active {
-            transform: scale(0.97);
-        }
-    </style>
+/* effet hover gaming */
+a:hover {
+    background: #00e5ff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00e5ff;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Gamingenzoo</h1>
+<div class="card">
+    <h1>🎮 Gamingenzoo</h1>
 
-    <button class="btn insta1"
-        onclick="openLink('https://www.instagram.com/xgamingenzoo/')">
-        📸 Instagram xgamingenzoo
-    </button>
-
-    <button class="btn youtube"
-        onclick="openLink('https://www.youtube.com/@gamingenzoo')">
-        ▶️ YouTube
-    </button>
-
-    <button class="btn twitch"
-        onclick="openLink('https://www.twitch.tv/gamingenzoo')">
-        🎮 Twitch
-    </button>
-
-    <button class="btn insta2"
-        onclick="openLink('https://www.instagram.com/gamingenzoo_tv/')">
-        📸 Instagram gamingenzoo_tv
-    </button>
-
-    <script>
-        function openLink(url) {
-            window.open(url, "_blank");
-        }
-    </script>
+    <a href="https://www.instagram.com/xgamingenzoo/" target="_blank">Instagram gamingenzoo</a>
+    <a href="https://www.youtube.com/@gamingenzoo" target="_blank">YouTube</a>
+    <a href="https://www.twitch.tv/gamingenzoo" target="_blank">Twitch</a>
+    <a href="https://www.instagram.com/gamingenzoo_tv/" target="_blank">Instagram gamingenzoo_tv</a>
+</div>
 
 </body>
 </html>
