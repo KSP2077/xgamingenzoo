@@ -1,53 +1,66 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <title>Gamingenzoo</title>
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* IMAGE DE FOND */
-    background: url("ksppfpv.jpg") center/cover no-repeat;
+    /* 🔥 TON IMAGE DE FOND */
+    background-image: url("ksppfpv.jpg");
+    background-size: cover;
+    background-position: center;
+
     font-family: Arial, sans-serif;
 }
 
-/* panneau central */
+/* carte centrale */
 .card {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 40px;
-    border-radius: 20px;
+    background: rgba(0,0,0,0.8);
+    padding: 45px;
+    border-radius: 25px;
     text-align: center;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
 }
 
 /* titre */
 h1 {
     color: white;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    letter-spacing: 2px;
 }
 
 /* boutons */
-a {
+.btn {
     display: block;
-    margin: 10px 0;
-    padding: 12px;
+    margin: 12px 0;
+    padding: 14px 25px;
+    border-radius: 12px;
     text-decoration: none;
     color: white;
     background: #00bcd4;
-    border-radius: 10px;
-    transition: 0.3s;
+    transition: 0.25s;
+    font-weight: bold;
 }
 
-/* effet hover gaming */
-a:hover {
+/* effet hover glow */
+.btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px #00e5ff;
     background: #00e5ff;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #00e5ff;
 }
 </style>
 </head>
@@ -55,14 +68,15 @@ a:hover {
 <body>
 
 <div class="card">
-    <h1>🎮 Gamingenzoo</h1>
+    <h1>🎮 GAMINGENZOO</h1>
 
-    <a href="https://www.instagram.com/xgamingenzoo/" target="_blank">Instagram gamingenzoo</a>
-    <a href="https://www.youtube.com/@gamingenzoo" target="_blank">YouTube</a>
-    <a href="https://www.twitch.tv/gamingenzoo" target="_blank">Twitch</a>
-    <a href="https://www.instagram.com/gamingenzoo_tv/" target="_blank">Instagram gamingenzoo_tv</a>
+    <a class="btn" href="https://www.instagram.com/xgamingenzoo/" target="_blank">Instagram gamingenzoo</a>
+    <a class="btn" href="https://www.youtube.com/@gamingenzoo" target="_blank">YouTube</a>
+    <a class="btn" href="https://www.twitch.tv/gamingenzoo" target="_blank">Twitch</a>
+    <a class="btn" href="https://www.instagram.com/gamingenzoo_tv/" target="_blank">Instagram gamingenzoo_tv</a>
 </div>
 
 </body>
 </html>
+
 
