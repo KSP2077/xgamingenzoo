@@ -1,79 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gamingenzoo</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* 🔥 TON IMAGE DE FOND */
-    background-image: url("ksppfpv.jpg");
-    background-size: cover;
-    background-position: center;
-
+/* ===== IMAGE DE FOND ===== */
+body{
+    margin:0;
+    height:100vh;
+    background: url("ksppfpv.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     font-family: Arial, sans-serif;
 }
 
-/* carte centrale */
-.card {
-    background: rgba(0,0,0,0.8);
-    padding: 45px;
-    border-radius: 25px;
-    text-align: center;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+/* ===== CARTE CENTRALE (comme ton Frame noir) ===== */
+.panel{
+    background: rgba(0,0,0,0.75); /* noir transparent */
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:90%;
+    max-width:380px;
+    backdrop-filter: blur(6px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
 }
 
-/* titre */
-h1 {
-    color: white;
-    margin-bottom: 30px;
-    font-size: 32px;
-    letter-spacing: 2px;
+/* ===== TITRE ===== */
+h1{
+    color:white;
+    margin-bottom:25px;
+    font-size:30px;
 }
 
-/* boutons */
-.btn {
-    display: block;
-    margin: 12px 0;
-    padding: 14px 25px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: white;
-    background: #00bcd4;
-    transition: 0.25s;
-    font-weight: bold;
+/* ===== BOUTONS ===== */
+.btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    margin:8px 0;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    color:white;
+    transition:0.25s;
 }
 
-/* effet hover glow */
-.btn:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 20px #00e5ff;
-    background: #00e5ff;
+/* couleurs plateformes */
+.insta{background:#9900FF;}
+.youtube{background:#FF0000;}
+.twitch{background:#C600FF;}
+.insta2{background:#7A00CC;}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.btn:active{
+    transform:scale(0.96);
+}
+
+/* mobile */
+@media(max-width:500px){
+    .panel{padding:25px;}
+    h1{font-size:22px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-    <h1>🎮 GAMINGENZOO</h1>
+<div class="panel">
 
-    <a class="btn" href="https://www.instagram.com/xgamingenzoo/" target="_blank">Instagram gamingenzoo</a>
-    <a class="btn" href="https://www.youtube.com/@gamingenzoo" target="_blank">YouTube</a>
-    <a class="btn" href="https://www.twitch.tv/gamingenzoo" target="_blank">Twitch</a>
-    <a class="btn" href="https://www.instagram.com/gamingenzoo_tv/" target="_blank">Instagram gamingenzoo_tv</a>
+    <h1>🎮 Gamingenzoo</h1>
+
+    <button class="btn insta"
+        onclick="openLink('https://www.instagram.com/xgamingenzoo/')">
+        Instagram gamingenzoo
+    </button>
+
+    <button class="btn youtube"
+        onclick="openLink('https://www.youtube.com/@gamingenzoo')">
+        YouTube
+    </button>
+
+    <button class="btn twitch"
+        onclick="openLink('https://www.twitch.tv/gamingenzoo')">
+        Twitch
+    </button>
+
+    <button class="btn insta2"
+        onclick="openLink('https://www.instagram.com/gamingenzoo_tv/')">
+        Instagram gamingenzoo_tv
+    </button>
+
 </div>
+
+<script>
+function openLink(url){
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
-
 
